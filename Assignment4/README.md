@@ -1,4 +1,4 @@
-### We have considered many many points in our last 4 lectures. Some of these we have covered directly and some indirectly. They are:
+### Architectural Basics:
 - ##### How many layers,
    - Number of layers in a network depends on receptive fields, depends on size of the kernel, and available computation units. If we have less number of computation units then we can reduce number of layers using Maxpooling layer(or transition layer).
 - ##### MaxPooling,
@@ -12,6 +12,7 @@
     - By reducing the number of kernels from 512 to 32 will work fine but here we are compting 512 to get 32 this is not correct intuitively.
     - The **1x1** convultion doesn't revalues all 512 kernels to pick 32, instead it merges all 512 to generate 32. If some feature will have less weitage it will be supressed in output and with back-propagation it helps the network to reevalutes those weights to give better prediction.
 - ##### 3x3 Convolutions,
+    - 3x3 convolution is a 3x3 kernel moving all over the input array to give a single value. Example:
     - 
 - ##### Receptive Field,
     - 
