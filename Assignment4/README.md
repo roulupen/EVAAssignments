@@ -12,10 +12,9 @@
     - By reducing the number of kernels from 512 to 32 will work fine but here we are compting 512 to get 32 this is not correct intuitively.
     - The **1x1** convultion doesn't revalues all 512 kernels to pick 32, instead it merges all 512 to generate 32. If some feature will have less weitage it will be supressed in output and with back-propagation it helps the network to reevalutes those weights to give better prediction.
 - ##### 3x3 Convolutions,
-    - 3x3 convolution is a 3x3 kernel moving all over the input array to give a single value. Example:
-    - 
+    - We can use any other size kernels like 5x5, 7x7. But to capture all the pixels of an image in receptive fields 3x3 channels uses less coputational power.
 - ##### Receptive Field,
-    - 
+    - In a network before applying any transitional layer we should be sure that the size of the receptive field at that layer is equal to object size in that images or else the network may not identify all the features in the image.
 - ##### SoftMax,
     - 
 - ##### Learning Rate,
