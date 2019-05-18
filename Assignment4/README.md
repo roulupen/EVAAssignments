@@ -1,10 +1,16 @@
 ### We have considered many many points in our last 4 lectures. Some of these we have covered directly and some indirectly. They are:
 - ##### How many layers,
-   - The 
+   - Number of layers in a network depends on receptive fields, depends on size of the kernel, and available computation units. If we have less number of computation units then we can reduce number of layers using Maxpooling layer(or transition layer).
 - ##### MaxPooling,
-    - 
+    - MaxPooling is used to reduce number of kernels(computational unit requirment) and Maxpooling takes values with higher weightage to output, so it reduces any noise but at the same time it may supress some feature as well.
+    - [Image which describes Maxpooling]
 - ##### 1x1 Convolutions,
-    -
+    - 1x1 convolution is used to reduce number of channel in a network. Before invention of 1x1 convolution we were using normal convolution for reducing number of channels.
+    - Example: 392x392x256 | (3x3x256)x512 | 390x390x512
+    - MaxPooling
+    - 195x195x512 | (?x?x512)x32    | ?x?x32 RF of 22x22
+    - By reducing the number of kernels from 512 to 32 will work fine but here we are compting 512 to get 32 this is not correct intuitively.
+    - The **1x1** convultion doesn't revalues all 512 kernels to pick 32, instead it merges all 512 to generate 32. If some feature will have less weitage it will be supressed in output and with back-propagation it helps the network to reevalutes those weights to give better prediction.
 - ##### 3x3 Convolutions,
     - 
 - ##### Receptive Field,
