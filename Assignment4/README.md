@@ -12,15 +12,15 @@
     - By reducing the number of kernels from 512 to 32 will work fine but here we are compting 512 to get 32 this is not correct intuitively.
     - The **1x1** convultion doesn't revalues all 512 kernels to pick 32, instead it merges all 512 to generate 32. If some feature will have less weitage it will be supressed in output and with back-propagation it helps the network to reevalutes those weights to give better prediction.
 - ##### 3x3 Convolutions,
-    - We can use any other size kernels like 5x5, 7x7. But to capture all the pixels of an image in receptive fields 3x3 channels uses less coputational power.
+    - We can use any other size kernels like 5x5, 7x7, 6x10. But to capture all the pixels of an image in receptive fields 3x3 channels uses less coputational power. Using 3x3 we can acheive all kinds of kernel.
 - ##### Receptive Field,
     - In a network before applying any transitional layer we should be sure that the size of the receptive field at that layer is equal to object size in that images or else the network may not identify all the features in the image.
 - ##### SoftMax,
     - Softmax activation function is used for multi class classification problem. Using softmax each output class is associated with a probalily like score and based on that model predict what would be the output of a given input. Sum of all softmax score for different classes of a given input will be 1.
 - ##### Learning Rate,
-    - 
+    - Learning rate is a hyper tuning paramter, it decides how fast we can arrive at the solution. This paramter used in grdient ascent/descent algorithm to decide the step size. The higher the learning rate faster the learning but when we approach towards the final solution if the learning rate is more then we may not reach the ideal solution and if we are keeping learning rate lower then we have to run the model training for a longer period of time. So, in-order to come for a mutual solution initial while starting of the model training the learning rate can be higher and after some cut-off the learning rate can reduce.
 - ##### Kernels and how do we decide the number of kernels?
-    - 
+    - Genrally in a network the number of kernels placed in each layer in incremental fashion, like 8, 16, 32, 64... The kernel size directly affects the number of paramter, so higher the kernel size more coputation power needed to train the model. If we have less coputation power then we need to reduce number of kernels and also Maxpooling is used to reduce number of kernels in a network.
 - ##### Batch Normalization,
     - 
 - ##### Image Normalization,
