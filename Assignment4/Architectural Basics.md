@@ -38,26 +38,4 @@
 - ##### Batch Normalization,
     - In different layers of CNN we get some input values from previous layer and the values can be anything. Using Batch Normalization we normalize the input values. So it standardizes the inputs to a layer and this stabilizes the learning rate.
 ### In Model 4 I'm modifying below paramters
-- ##### Changing batch sizes to 128
-- ##### Position of MaxPooling,
-    - 
-- ##### Concept of Transition Layers,
-    - 
-- ##### Position of Transition Layer,
-    - 
-- ##### The distance of MaxPooling from Prediction,
-    - 
-- ##### The distance of Batch Normalization from Prediction,
-    - 
-- ##### When do we stop convolutions and go ahead with a larger kernel or some other alternative (which we have not yet covered)
-    - 
-- ##### How do we know our network is not going well, comparatively, very early
-    - 
-- ##### Batch Size, and effects of batch size
-    - 
-- ##### When to add validation checks
-    - 
-- ##### LR schedule and concept behind it
-    - 
-- ##### Adam vs SGD
-    -    
+    - Fine tuning different parameters.
