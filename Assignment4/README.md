@@ -16,7 +16,7 @@
 - ##### Receptive Field,
     - In a network before applying any transitional layer we should be sure that the size of the receptive field at that layer is equal to object size in that images or else the network may not identify all the features in the image.
 - ##### SoftMax,
-    - Softmax activation function is used for classification problem. Using softmax each output class is associated with a probalily like score and based on that model predict what would be the output of a given input. Sum of all softmax score for different classes of a given input will be 1.
+    - Softmax activation function is used for multi class classification problem. Using softmax each output class is associated with a probalily like score and based on that model predict what would be the output of a given input. Sum of all softmax score for different classes of a given input will be 1.
 - ##### Learning Rate,
     - 
 - ##### Kernels and how do we decide the number of kernels?
