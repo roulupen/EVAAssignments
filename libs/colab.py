@@ -18,3 +18,17 @@ def setup_gcs(tpu_address: str = None):
             auth_info = json.load(f)
         tf.contrib.cloud.configure_gcs(sess, credentials=auth_info)
 
+def get_gcs_dirs(root_dir: str, project: str) -> Tuple[str, str]:
+    """
+    Get recommended directories for storing datasets (data_dir) and intermediate files generated during training
+    (work_dir).
+    :param root_dir: Root directory, which is often the Google Cloud Storage bucket when using TPUs.
+    :param project: Name of the project.
+    :return: Data directory for storaing datasets, and work directory for storing intermediate files.
+    """
+    data_dir: str = os.path.join(root_dir, 'data', project)
+    work_dir: str = os.path.join(root_dir, 'work', project)
+    tf.io.gfile.makedirs(data_dir)
+    tf.io.gfile.makedirs(work_dir)
+    return data_dir, work_dir
+
