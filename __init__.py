@@ -1,1 +1,1 @@
-from .libs import colab_util, data_util, optim, train
+from .libs import colab_util, data_util, optim, train, plotly
