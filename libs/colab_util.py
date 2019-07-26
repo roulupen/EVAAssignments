@@ -1,4 +1,8 @@
-from .imports import *
+from google import colab
+import tensorflow as tf
+import os
+import json
+from typing import List, Dict, Tuple, Union
 
 TPU_ADDRESS = f'grpc://{os.environ["COLAB_TPU_ADDR"]}' if "COLAB_TPU_ADDR" in os.environ else None
 
